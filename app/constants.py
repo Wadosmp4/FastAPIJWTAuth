@@ -11,7 +11,7 @@ class TokenType(str, Enum):
     VERIFICATION = VERIFICATION_TOKEN
 
 
-VERIFICATION_URL = "http://localhost:5000/auth/verify_email/{token}"
+VERIFICATION_URL = "http://localhost:5000/api/v1/auth/verify_email/{token}"
 
 USER_ROLE = 'user'
 ADMIN_ROLE = 'admin'
