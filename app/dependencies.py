@@ -1,4 +1,4 @@
-from fastapi import Depends, Request, HTTPException
+from fastapi import Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.utils import ProcessToken

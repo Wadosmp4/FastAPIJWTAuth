@@ -22,17 +22,6 @@ class RedisSettings(BaseSettings):
         env_file = './.env'
 
 
-class RabbitMQSettings(BaseSettings):
-    RABBITMQ_PORT: str
-    RABBITMQ_HOSTNAME: str
-    RABBITMQ_DEFAULT_USER: str
-    RABBITMQ_DEFAULT_PASS: str
-    RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: str
-
-    class Config:
-        env_file = './.env'
-
-
 class EmailSettings(BaseSettings):
     EMAIL_HOST: str
     EMAIL_PORT: str
@@ -44,7 +33,7 @@ class EmailSettings(BaseSettings):
         env_file = './.env'
 
 
-class AppSettings(DatabaseSettings, RedisSettings, RabbitMQSettings, EmailSettings):
+class AppSettings(DatabaseSettings, RedisSettings, EmailSettings):
     JWT_PRIVATE_KEY: str
     JWT_PUBLIC_KEY: str
     JWT_ALGORITHM: str
